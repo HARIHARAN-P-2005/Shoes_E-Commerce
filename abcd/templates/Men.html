@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    color: #f0f0f0; /* Light gray */
+    background-color: #3498db; /* Light blue */
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .product {
+    width: 25%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product:nth-child(1) {
+    background-color: #e74c3c; /* Red */
+    color: #fff; /* White */
+  }
+  
+  .product:nth-child(2) {
+    background-color: #2ecc71; /* Green */
+    color: #fff; /* White */
+  }
+  
+  .product:nth-child(3) {
+    background-color: #f1c40f; /* Orange */
+    color: #000; /* Black */
+  }
+  
+  .product:nth-child(4) {
+    background-color: #3498db; /* Light blue */
+    color: #fff; /* White */
+  }
+  
+  .product h2,
+  .product p,
+  .product button {
+    margin: 10px 0;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  button {
+    background-color: #fff; /* White */
+    color: #3498db; /* Light blue */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f0f0f0; /* Light gray */
+  }
+  
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Products</title>
+  <link rel="stylesheet" href="style.css"> </head>
+<body>
+  <h1>Our Featured Shoes</h1>
+  <section class="products">
+    <article class="product">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/k/n/7/-original-imaggcb7k3frtbrk.jpeg?q=90&crop=false" alt="Shoe 1">
+      <h2>Sparx Running Shoe</h2>
+      <p>₹2,500</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="product">
+      <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/h_373,q_80,w_280/v1/assets/images/26950148/2024/1/15/d7a8f602-61e7-4151-90c8-0a9efdb30e751705319094914RedTapeMenNavyBlueColourblockedSneakers1.jpg" alt="Shoe 2">
+      <h2>Red Tape Men Casual Sneakers</h2>
+      <p>₹800</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="product">
+      <img src="https://ae01.alicdn.com/kf/S81b7dd571965412496a8258ae245aab9h/2023-NEW-Men-s-Boots-Black-Outdoor-Non-slip-Hiking-Boots-Leather-Waterproof-Men-Sneakers-Work.jpg" alt="Shoe 3">
+      <h2>Tito Fashion Hiking Boots for Men</h2>
+      <p>₹1500</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="product">
+      <img src="https://litb-cgis.rightinthebox.com/images//640x640//202005/mdtwog1590673351316.jpg" alt="Shoe 4">
+      <h2>Loafer</h2>
+      <p>₹600</p>
+      <button>Add to Cart</button>
+    </article>
+  </section>
+</body>
+</html>

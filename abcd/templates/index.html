@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 150px; /* Adjust size as needed */
+}
+
+.navigation {
+    float: left;
+    margin-left: 50px;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #fff; /* Light text color */
+    transition: color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    color: #ffcc00; /* Yellow color on hover */
+}
+
+.cta {
+    float: right;
+}
+
+.btn {
+    background-color: #ffcc00; /* Yellow button color */
+    color: #222; /* Dark text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffc107; /* Darker yellow color on hover */
+}
+.hero {
+    background-image: url('hero-background.jpg'); /* Replace 'hero-background.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff; /* Light text color */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc; /* Light text color */
+}
+
+.hero-content .btn {
+    background-color: #ffcc00; /* Yellow button color */
+    color: #222; /* Dark text color */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #ffc107; /* Darker yellow color on hover */
+}
+.featured-products {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.featured-products .container {
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    flex: 0 0 calc(33.33% - 40px);
+    margin: 20px;
+    background-color: #444; /* Darker background color for product */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow color for price */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.product .btn {
+    background-color: #ffcc00; /* Yellow button color */
+    color: #222; /* Dark text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: #ffc107; /* Darker yellow color on hover */
+}
+.about-us {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.about-us .container {
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+.shop-by-category {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.shop-by-category .container {
+    text-align: center;
+}
+
+.shop-by-category h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category {
+    flex: 0 0 calc(50% - 40px);
+    margin: 20px;
+    background-color: #444; /* Darker background color for category */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.category img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category .btn {
+    background-color: #ffcc00; /* Yellow button color */
+    color: #222; /* Dark text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.category .btn:hover {
+    background-color: #ffc107; /* Darker yellow color on hover */
+}
+.newsletter-signup {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.newsletter-signup .container {
+    text-align: center;
+}
+
+.newsletter-signup h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.newsletter-signup p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.newsletter-form button {
+    background-color: #ffcc00; /* Yellow button color */
+    color: #222; /* Dark text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #ffc107; /* Darker yellow color on hover */
+}
+.footer {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.footer .container {
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.social-links {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 300px;
+    text-align: left;
+}
+
+.contact-info h3,
+.social-links h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links ul li:last-child {
+    margin-right: 0;
+}
+
+.social-links ul li a img {
+    width: 40px;
+    height: 40px;
+}
+
+.copyright {
+    margin-top: 30px;
+}
+.additional-elements {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.additional-elements .container {
+    text-align: center;
+}
+
+.slider {
+    margin-bottom: 50px;
+}
+
+.slider img {
+    max-width: 100%;
+}
+
+.special-promotions {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.special-promotions h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.special-promotions p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.special-promotions .btn {
+    background-color: #ffcc00; /* Yellow button color */
+    color: #222; /* Dark text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.special-promotions .btn:hover {
+    background-color: #ffc107; /* Darker yellow color on hover */
+}
+.customer-reviews {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0;
+}
+
+.customer-reviews .container {
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.review {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #333; /* Darker background color */
+    border-radius: 5px;
+    text-align: left;
+}
+
+.reviewer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+.reviewer-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.reviewer-info p {
+    font-size: 16px;
+    color: #ccc; /* Lighter text color */
+}
+
+.review-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img src="https://static.vecteezy.com/system/resources/thumbnails/008/956/590/small/creative-abstract-black-silhouette-running-shoe-design-logo-design-template-free-vector.jpg" alt="Sneakers"></a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="Men">Men's Collections</a></li>
+                <li><a href="women">Women's Collections</a></li>
+                <li><a href="About">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-trKGeKbFDhFu7JGypRDHInUemZsvpJM6IJeW_fXWShO7-Z_oMyUtXCyzY0Xc2WrMsg&usqp=CAU" alt="Sneaker">
+        </div>
+    </div>
+</header>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <img src="https://www.fashionbeans.com/wp-content/uploads/2018/08/basketballtop-768x346.jpg" alt="Collections">
+            <h1>Your Ultimate Collections [Stylish Sneakers]</h1>
+            <p>Discover our collection of stylish and comfortable shoes</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="featured-products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/mh-10-17-spidey-652ee7e6adb71.jpg?crop=0.400xw:0.799xh;0.0459xw,0.0612xh&resize=640:*" alt="Addidas Shoes">
+                <h3>Addidas Shoes</h3>
+                <p>Stylish and Perfect Wear For Men and Women</p>
+                <span>₹1000</span>
+                <a href="view" class="btn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <div class="product">
+                <img src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6677064/2018/8/25/03afc882-ddf8-4666-bca0-611e68d634731535179846429-Mens-Air-Jordan-1-Mid-Shoe-4811535179846269-1.jpg" alt="Nike Shoes">
+                <h3>Nike Shoes</h3>
+                <p>Comfortable and Classy For Men and Women</p>
+                <span>₹1050</span>
+                <a href="Views" class="btn">Add to Cart</a>
+            </div>
+                
+            <!-- Add more product divs as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="about-us">
+    <div class="container">
+        <img src="https://wa.snkraddicted.com/wp-content/uploads/2019/08/Holy-Grail-1.jpg" alt="Shoe Collection">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>We are passionate about providing high-quality shoes that combine style, comfort, and durability. With years of experience in the footwear industry, we strive to offer a wide range of trendy and classic designs to suit every taste.</p>
+            <p>Our dedicated team works tirelessly to ensure that every pair of shoes meets our stringent standards for quality and craftsmanship. Whether you're looking for casual sneakers, elegant heels, or rugged boots, we've got you covered.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="shop-by-category">
+    <div class="container">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/18274390/2022/5/14/c64644f6-840f-4496-bb42-19359e9881771652523841987RoadsterMenBrownTexturedPUSneakers1.jpg" alt="Men's Collection">
+                <h3>Men's Collection</h3>
+                <a href="Mencollection" class="btn">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230606/y7cU/647eb49042f9e729d727443f/-473Wx593H-466239908-beige-MODEL6.jpg" alt="Women's Collection">
+                <h3>Women's Collection</h3>
+                <a href="Womencollection" class="btn">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20231005/2AnW/651ed5afafa4cf41f52a2c97/-473Wx593H-464535108-black-MODEL.jpg" alt="Sports Collection">
+                <h3>Sports Collection</h3>
+                <a href="Sportscollection" class="btn">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://i.ebayimg.com/images/g/RjwAAOSwCStj0xFR/s-l1200.jpg" alt="Formal Shoe for Men">
+                <h3>Formal Shoe for Men</h3>
+                <a href="Formalcollection" class="btn">Shop Now</a>
+            <!-- Add more category divs as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="newsletter-signup">
+    <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Sign up for our newsletter to receive updates on new arrivals, promotions, and special offers.</p>
+        <form class="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email address">
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<!-- Other sections of the webpage go here -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Shoe Street Tiruppur</p>
+                <p>Tiruppur-641604</p>
+                <p>Email: dhinakar96771533@gmail.com</p>
+                <p>Phone: +91 9677841533</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><img src="https://i.pinimg.com/736x/b8/d6/9b/b8d69bfad379fbc0c7163b08e2928f67.jpg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeH5u8ThTuIXMKXorPyciSuAUZERCRlXTr0iTX88wtzE-bI5BnmCq5uVw-hmjBvy-Ey3A&usqp=CAU" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="https://media.istockphoto.com/id/1278996256/vector/camera-icon-simple-style-isolated-vector-illustration-on-white-background.jpg?s=612x612&w=0&k=20&c=nmJsi4AIImCMPD_hyNDb8kLhO1iDRcbW-haTBcByOJo=" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Stylish Sneakers. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="additional-elements">
+    <div class="container">
+        <div class="slider">
+            <img src="https://laz-img-sg.alicdn.com/p/e77d43a23277fd67ff9a8c1bc7e32874.jpg" alt="Collection 1">
+            <img src="https://killakustomsz.co.uk/cdn/shop/products/97D5B513-E6BF-4DEE-B5CB-3D7BAED62C07_1500x.jpg?v=1659765052" alt="Shoes 2">
+            <img src="https://im.whatshot.in/img/2023/Aug/sneaker-stores-in-bangalorewebp-1-1691655140.jpg" alt="Asian 3">
+        </div>
+        <div class="special-promotions">
+            <h2>Special Promotions</h2>
+            <p>Check out our latest promotions and discounts!</p>
+            <a href="#" class="btn">View Promotions</a>
+        </div>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Header content goes here -->
+</header>
+
+<section class="customer-reviews">
+    <div class="container">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+            <div class="reviewer-info">
+                <img src="data:image/png;base64,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" alt="User">
+                <h3>John Smith</h3>
+                <p>Verified Buyer</p>
+            </div>
+            <div class="review-content">
+                <p>"These shoes are amazing! They fit perfectly and are super comfortable. Definitely recommend them!"</p>
+            </div>
+        </div>
+        <div class="review">
+            <div class="reviewer-info">
+                <img src="data:image/png;base64,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" alt="Users">
+                <h3>Jane Smith</h3>
+                <p>Verified Buyer</p>
+            </div>
+            <div class="review-content">
+                <p>"I'm thrilled with my purchase! The quality of these shoes is top-notch, and they look even better in person."</p>
+            </div>
+        </div>
+        <!-- Add more reviews as needed -->
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+</body>
+</html>
+

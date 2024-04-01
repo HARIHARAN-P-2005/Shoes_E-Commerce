@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    color: #f0f0f0; /* Light gray */
+    background-color: #3498db; /* Light blue */
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .product {
+    width: 25%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product:nth-child(1) {
+    background-color: #e74c3c; /* Red */
+    color: #fff; /* White */
+  }
+  
+  .product:nth-child(2) {
+    background-color: #2ecc71; /* Green */
+    color: #fff; /* White */
+  }
+  
+  .product:nth-child(3) {
+    background-color: #f1c40f; /* Orange */
+    color: #000; /* Black */
+  }
+  
+  .product:nth-child(4) {
+    background-color: #3498db; /* Light blue */
+    color: #fff; /* White */
+  }
+  
+  .product h2,
+  .product p,
+  .product button {
+    margin: 10px 0;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  button {
+    background-color: #fff; /* White */
+    color: #3498db; /* Light blue */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f0f0f0; /* Light gray */
+  }
+  
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Products</title>
+  <link rel="stylesheet" href="style.css"> </head>
+<body>
+  <h1>Our Featured Shoes</h1>
+  <section class="products">
+    <article class="product">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/t/s/5/-original-imaggkkmzhcg6e35.jpeg?q=90&crop=false" alt="Shoe 1">
+      <h2>Sparx Running Shoe for Women</h2>
+      <p>₹1,500</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="product">
+      <img src="https://ae01.alicdn.com/kf/S626caae1ea1d43daa4ad49b1917b3810A.jpg_640x640Q90.jpg_.webp" alt="Shoe 2">
+      <h2>Womenen Casual Sneakers</h2>
+      <p>₹700</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="product">
+      <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/9836e72d2af9b4ce63843b45a1305888.jpg?imageView2/2/w/500/q/60/format/webp" alt="Shoe 3">
+      <h2>Tito Fashion Hiking Boots for Women</h2>
+      <p>₹600</p>
+      <button>Add to Cart</button>
+    </article>
+    <article class="product">
+      <img src="https://ae01.alicdn.com/kf/Se76c51f1c9af49c5a52c3880e1a9194fX.jpg_640x640q90.jpg" alt="Shoe 4">
+      <h2>Loafer for Women</h2>
+      <p>₹600</p>
+      <button>Add to Cart</button>
+    </article>
+  </section>
+</body>
+</html>

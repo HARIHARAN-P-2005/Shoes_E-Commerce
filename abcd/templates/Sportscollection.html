@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Collection - Shoe Store</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .shoe-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .shoe-image {
+            flex: 1;
+            max-width: 400px;
+        }
+        .shoe-image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .shoe-info {
+            flex: 1;
+        }
+        .shoe-info h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .shoe-info p {
+            margin: 10px 0;
+        }
+        .purchase-link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .purchase-link a:hover {
+            background-color: #0056b3;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .product:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .product p {
+            margin-bottom: 10px;
+        }
+        .product span {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1>Sports Shoes - Details</h1>
+    </div>
+</header>
+
+<section class="sports-collection">
+    <div class="container">
+        <h2>Sports Collection</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/1100/1300/xif0q/shoe/1/j/y/-original-imagsfdvcwgpy22g.jpeg?q=90&crop=false" alt="Sports Shoe 1">
+                <h3>Asian Thar-01 White Sports</h3>
+                <p>Comfortable Wear For Training,Gym,Walking,Stylish</p>
+                <span>₹700</span>
+                <a href="to" class="btn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/shoe/m/t/l/7-firefly-08-7-asian-black-mauve-original-imagwy4ghsx7bq64.jpeg?q=70&crop=false" alt="Sports Shoe 2">
+                <h3>Asian Firefly-08</h3>
+                <p>Comfortablr Wear For Gym,Sports,Walking,Training,Stylish Running Shoes For Women</p>
+                <span>₹900</span>
+                <a href="cart" class="btn">Add to Cart</a>
+            </div>
+            <!-- Add more product divs as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Other sections of the webpage go here -->
+
+<footer class="footer">
+    <!-- Footer content goes here -->
+</footer>
+
+</body>
+</html>
